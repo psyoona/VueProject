@@ -35,6 +35,21 @@ var app = Vue.createApp({
 			}
 		}
 	},
+	components: {
+		'component5': {
+			data() {
+				return {
+					message: '이런 말도 안되는..'
+				}
+			},
+			template: `<div>
+							<h3>안녕..</h3>
+							<h2>{{message}}</h2>
+							<h2>{{object1}}</h2>
+							<h4>오잉!?</h4>
+						</div>`
+		}
+	},
 	methods: {
 		userInfo: () => {
 			console.log('hihihi');
@@ -74,4 +89,13 @@ var app = Vue.createApp({
 	}
 });
 
+
+app.component('component1',
+	{
+		template: `<div>
+						<h3>첫번째 컴포넌트 태그</h3>
+						<h3>두번째 컴포넌트 태그</h3>
+					</div>`
+	}
+);
 app.mount('#app3');
