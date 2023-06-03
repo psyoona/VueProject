@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyVersion>1.00.000</AssemblyVersion>
+    <FileVersion>1.00.000</FileVersion>
   </PropertyGroup>
 
 </Project>
