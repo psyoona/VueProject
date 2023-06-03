@@ -20,7 +20,7 @@ Vue.createApp({
 	}
 }).mount('#app2');
 
-var test = Vue.createApp({
+var app = Vue.createApp({
 	data() {
 		return {
 			message: 'Hello Vue!',
@@ -38,6 +38,40 @@ var test = Vue.createApp({
 	methods: {
 		userInfo: () => {
 			console.log('hihihi');
+		},
+		setValue: () => {
+			app.object1 = {
+				a1: '변경되었다..'
+			}
+		},
+		destroyz: () => {
+			app.unmount();
 		}
+	},
+	beforeCreate: () => {
+		console.log('생성되기 전');
+	},
+	created: () => {
+		console.log('생성됨');
+	},
+	beforeMount: () => {
+		console.log('Vue 객체가 관리할 태그가 할당되기 전입니다.');
+	},
+	mounted: () => {
+		console.log('Vue 객체가 관리할 태그가 할당되었습니다.');
+	},
+	beforeUpdate: () => {
+		console.log('관리하고 있는 html 요소 내부가 변경되기 전입니다.');
+	},
+	updated: () => {
+		console.log('관리하고 있는 html 요소 내부가 변경되었습니다.');
+	},
+	beforeUnmount: () => {
+		console.log('Unmount 전입니다.');
+	},
+	unmounted: () => {
+		console.log('Unmount 후입니다.');
 	}
-}).mount('#app3');
+});
+
+app.mount('#app3');
