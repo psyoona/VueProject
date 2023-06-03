@@ -31,7 +31,7 @@ var test = Vue.createApp({
 			array1: [50, 60, 70],
 			object1: {
 				a1: 'a1 문자열',
-				a2: 'a2 문자열'
+				a2: 'a2 문자 열'
 			}
 		}
 	},
