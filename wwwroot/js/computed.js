@@ -3,7 +3,9 @@ let computedTest = Vue.createApp({
 		return {
 			a1: 250,
 			a2: 300,
-			a3: 0
+			a3: 0,
+			data1: 55,
+			data2: 56
 		}
 	},
 	methods: {
@@ -28,6 +30,19 @@ let computedTest = Vue.createApp({
 		getRandomComputed: function () {
 			console.log('random computed');
 			return Math.random();
+		},
+		data3: {
+			get : function() {
+				return this.data1 + ',' + this.data2;
+			},
+			set: function (newValue) {
+				let list = newValue.split(',');
+
+				if (list.length >= 2) {
+					this.data1 = list[0];
+					this.data2 = list[1];
+				}
+			}
 		}
 	}
 }).mount('#computedTest');
