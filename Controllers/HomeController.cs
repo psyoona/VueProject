@@ -23,6 +23,11 @@ namespace VueProject.Controllers
 			return View();
 		}
 
+		public IActionResult Computed()
+		{
+			return View();
+		}
+
 		public IActionResult Privacy()
 		{
 			return View();
