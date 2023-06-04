@@ -16,4 +16,8 @@
     <FileVersion>1.00.001</FileVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

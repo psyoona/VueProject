@@ -1,0 +1,14 @@
+﻿<div>
+	<span>Attribute bind test 입니다.</span>
+
+	<div id="attributeBindTest">
+		<h3>{{string1}}</h3>
+		<a v-bind:href="link">홈페이지</a>
+		<hr/>
+		<a :href="link">홈페이지</a>
+		<hr/>
+		<img v-bind:src="imgsrc" v-bind:width="imgWidth" v-on:mouseenter="setImageWidth" v-on:mouseleave="resetImageWidth"/>
+	</div>
+</div>
+
+<script defer type="text/javascript" src="~/js/attributeBindTest.js"></script>

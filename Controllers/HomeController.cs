@@ -28,6 +28,11 @@ namespace VueProject.Controllers
 			return View();
 		}
 
+		public IActionResult AttributeBind()
+		{
+			return this.View();
+		}
+
 		public IActionResult Privacy()
 		{
 			return View();
