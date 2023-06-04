@@ -38,31 +38,8 @@ var app = Vue.createApp({
 		}
 	},
 	components: {
-		'component5': {
-			data() {
-				return {
-					message: '이런 말도 안되는..'
-				}
-			},
-			template: `<div>
-							<h3>안녕..</h3>
-							<h2>{{message}}</h2>
-							<h2>{{object1}}</h2>
-							<h4>오잉!?</h4>
-						</div>`
-		}
-	},
-	methods: {
-		userInfo: () => {
-			console.log('hihihi');
-		},
-		setValue: () => {
-			app.object1 = {
-				a1: '변경되었다..'
-			}
-		},
-		destroyz: () => {
-			app.unmount();
+		test1: {
+			template: '<h2>Hello world~!@</h2>'
 		}
 	},
 	beforeCreate: () => {
