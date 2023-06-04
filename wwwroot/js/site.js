@@ -100,4 +100,4 @@ app.component('component1',
 					</div>`
 	}
 );
-app.mount('#app3');
+let test = app.mount('#app3');

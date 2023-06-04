@@ -1,7 +1,15 @@
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
+using Microsoft.Extensions.WebEncoders;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//builder.Services.Configure<WebEncoderOptions>(options =>
+//{
+//	options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All);
+//});
 
 var app = builder.Build();
 

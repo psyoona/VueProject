@@ -18,6 +18,11 @@ namespace VueProject.Controllers
 			return View();
 		}
 
+		public IActionResult Watch()
+		{
+			return View();
+		}
+
 		public IActionResult Privacy()
 		{
 			return View();
