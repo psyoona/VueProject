@@ -1,4 +1,14 @@
-﻿<div>
+﻿<style>
+	.css1 {
+		background: yellow;
+	}
+
+	.css2 {
+		color: red;
+	}
+</style>
+
+<div>
 	<span>Attribute bind test 입니다.</span>
 
 	<div id="attributeBindTest">
@@ -8,6 +18,19 @@
 		<a :href="link">홈페이지</a>
 		<hr/>
 		<img v-bind:src="imgsrc" v-bind:width="imgWidth" v-on:mouseenter="setImageWidth" v-on:mouseleave="resetImageWidth"/>
+
+		<hr/>
+		<span>CSS 바인딩 테스트</span>
+		<h3 class="css1 css2">기본 문법</h3>
+		<h3 v-bind:class="[css1Name]">Vue binding 적용</h3>
+		<h3 v-bind:class="[css1Name, css2Name]">Vue binding 대괄호 적용</h3>
+		<button type="button" v-on:click="setCss1">css1 변경</button>
+		<button type="button" v-on:click="removeCss">css1 변경 취소</button>
+
+		<h3 v-bind:class="{css1: isCss1, css2: isCss2}">조건부 css적용</h3>
+
+		<h3 v-bind:class="[isCss1 ? css1Name: '', isCss2 ? css2Name: '']">복합..</h3>
+		<h3 v-bind:class="[isCss1 ? css1Name: css2Name]">테스트..</h3>
 	</div>
 </div>
 
