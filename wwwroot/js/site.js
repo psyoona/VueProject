@@ -1,4 +1,4 @@
-﻿Vue.createApp({
+﻿let firstVue = Vue.createApp({
 	data() {
 		return {
 			message: 'Hello Vue!',
@@ -7,7 +7,9 @@
 			float1: 1.11
 		}
 	}
-}).mount('#app');
+});
+
+firstVue.mount('#app');
 
 Vue.createApp({
 	data() {
