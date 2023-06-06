@@ -38,6 +38,11 @@ namespace VueProject.Controllers
 			return this.View();
 		}
 
+		public IActionResult FormBinding()
+		{
+			return this.View();
+		}
+
 		public IActionResult Privacy()
 		{
 			return View();

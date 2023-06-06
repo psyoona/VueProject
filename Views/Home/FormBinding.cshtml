@@ -1,0 +1,71 @@
+﻿<div>
+	<span>Vue Inline Style test 입니다.</span>
+
+	<div id="formBindingTest">
+		<h3>Input Test</h3>
+		<input type="text" v-model="input1"/>
+
+		<h3>input1: {{input1}}</h3>
+
+		<h3>Text Area</h3>
+		<textarea v-model="input2"></textarea>
+		<pre>input2: {{input2}}</pre>
+
+		<hr/>
+		<h3>Checkbox</h3>
+		<input type="checkbox" v-model="input3" />체크박스1 <br/>
+		<input type="checkbox" v-model="input4" />체크박스2 <br />
+		<input type="checkbox" v-model="input5" />체크박스3 <br />
+
+		<h3>input3: {{input3}}</h3>
+		<h3>input4: {{input4}}</h3>
+		<h3>input5: {{input5}}</h3>
+
+		<h3>Checkbox Value</h3>
+		@* value에 관계없이 checkbox는 true/false만 return한다. *@
+		<input type="checkbox" v-model="input6" value="100" />체크박스 100<br/>
+		<input type="checkbox" v-model="input7" value="200" />체크박스 200<br />
+		<input type="checkbox" v-model="input8" value="300" />체크박스 300<br />
+
+		<h3>input6: {{input6}}</h3>
+		<h3>input7: {{input7}}</h3>
+		<h3>input8: {{input8}}</h3>
+		<hr />
+
+		<input type="radio" v-model="radio1" value="r1"/>라디오1<br/>
+		<input type="radio" v-model="radio1" value="r2"/>라디오2<br />
+		<input type="radio" v-model="radio1" value="r3"/>라디오3<br />
+
+		<h3>radio1: {{radio1}}</h3>
+		<hr/>
+
+		<h3>Select</h3>
+		<select v-model="select1">
+			<option value="item1">항목1</option>
+			<option value="item2">항목2</option>
+			<option value="item3">항목3</option>
+			<option value="item4">항목4</option>
+			<option value="item5">항목5</option>
+		</select>
+
+		<h3>select1: {{select1}}</h3>
+		<hr/>
+
+		@* lazy keyword는 focus를 잃었을 때 model에 값을 바인딩한다. *@
+		<input type="text" v-model.lazy="input11"/><br/>
+		<h3>input11: {{input11}}</h3>
+		<hr/>
+		
+		@* number keyword는 number 입력 시 number 타입으로 변환.. *@
+		<input type="text" v-model.number="input12"/>
+		<h3>input12: {{input12}}</h3>
+		<button type="button" v-on:click="checkType">타입 체크</button>
+
+		<hr />
+		<input type="text" v-model="input13"/>
+		<pre>[{{input13}}]</pre>
+		<h3>[{{input13}}]</h3>
+	</div>
+</div>
+
+<script defer type="text/javascript" src="~/js/formBinding.js"></script>
