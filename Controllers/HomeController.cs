@@ -43,6 +43,11 @@ namespace VueProject.Controllers
 			return this.View();
 		}
 
+		public IActionResult EventVue()
+		{
+			return this.View();
+		}
+
 		public IActionResult Privacy()
 		{
 			return View();

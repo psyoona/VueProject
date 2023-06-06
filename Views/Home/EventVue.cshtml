@@ -1,0 +1,32 @@
+﻿<style>
+	.in {
+		background-color: yellow;
+		color: red;
+	}
+
+	.out {
+		background-color: red;
+		color: yellow;
+	}
+</style>
+
+<div>
+	<span>Vue Event test 입니다.</span>
+
+	<div id="eventVueTest">
+		<button type="button" v-on:click="btnEvent">버튼</button>
+		@* 원래 v-on: 대신 @만 써도 되지만 닷넷에서는 @가 예약어기 때문에 @@를 사용해야 한다. *@
+		<button type="button" @@click="btnEvent">버튼</button>
+		<hr/>
+		<img src="../images/logo.png" width="200" @@click="imageEvent"/>
+		<hr/>
+		data1: <input type="number" v-model.number="data1" /><br />
+		data2: <input type="number" v-model.number="data2" /><br />
+		<button type="button" @@click="addNumber">더하기</button>
+		<h3>결과: {{result1}}</h3>
+
+		<h3 v-bind:class="inOutCss" @@mouseenter="inEvent" @@mouseleave="outEvent">테스트 문자열</h3>
+	</div>
+</div>
+
+<script defer type="text/javascript" src="~/js/eventVue.js"></script>
