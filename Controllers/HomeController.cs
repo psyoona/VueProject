@@ -33,6 +33,11 @@ namespace VueProject.Controllers
 			return this.View();
 		}
 
+		public IActionResult InlineStyle()
+		{
+			return this.View();
+		}
+
 		public IActionResult Privacy()
 		{
 			return View();

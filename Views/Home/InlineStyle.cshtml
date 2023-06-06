@@ -1,0 +1,16 @@
+﻿<div>
+	<span>Vue Inline Style test 입니다.</span>
+
+	<div id="inlineTest">
+		<h3 style="background-color: red; color: yellow;">Text</h3>
+		<h3 v-bind:style="{backgroundColor: backgroundColorValue, color: colorValue}">Text</h3>
+
+		<button type="button" v-on:click="setInlineStyle">inline css 변경하기</button>
+
+		<h3 v-bind:style="styleValue">Text</h3>
+
+		<button type="button" v-on:click="setStyleValue">객체 변경</button>
+	</div>
+</div>
+
+<script defer type="text/javascript" src="~/js/inlineStyle.js"></script>
