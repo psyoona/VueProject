@@ -1,0 +1,34 @@
+﻿<style>
+	.box {
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+	}
+</style>
+
+<div>
+	<span>Vue Event Modifier test 입니다.</span>
+
+	<div id="eventModifier">
+		<div class="box" @@click="method1">
+			<button type="button" @@click="method2">버튼</button>
+			<button type="button" @@click.stop="method2">테스트 버튼</button>
+		</div>
+
+		<a @@click.prevent="method1" href="http://yoonslab.com">yoonslab</a>
+
+		<div @@click.capture="method1" class="box">
+			<button type="button" @@click="method2">버튼</button>
+		</div>
+
+		@* 이벤트 클릭 타겟이 자신이 아닐 경우 무시한다.(self) *@
+		<div @@click.self="method1" class="box">
+			<button type="button" @@click="method2">버튼</button>
+		</div>
+
+		@* 브라우저 로드 시 최초 한번만 실행 *@
+		<div @@click.once="method1" class="box"></div>
+	</div>
+</div>
+
+<script defer type="text/javascript" src="~/js/eventModifier.js"></script>
