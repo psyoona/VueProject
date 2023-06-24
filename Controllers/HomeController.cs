@@ -58,6 +58,11 @@ namespace VueProject.Controllers
 			return View();
 		}
 
+		public IActionResult V_IF()
+		{
+			return View();
+		}
+
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
