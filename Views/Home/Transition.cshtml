@@ -1,0 +1,78 @@
+﻿<style>
+	/* 태그가 사라지는 동작이 발생했을 때 공통 부분 */
+	.fade-leave-active {
+		transition: all .5s;
+	}
+
+	/* 태그가 사리지기 직전 */
+	.fade-leave {
+		opacity: 1;
+	}
+
+	/* 태그가 사라지고 난 후 */
+	.fade-leave-to {
+		opacity: 0;
+	}
+
+	/* 태그가 나타나는 동작이 발생했을 때 공통 부분 */
+	.fade-enter-active {
+		transition: all .5s;
+	}
+
+	/* 태그가 나타나기 직전 */
+	.fade-enter {
+		opacity: 0;
+	}
+
+	/* 태그가 나타난 후 */
+	.fade-enter-to {
+		opacity: 1;
+	}
+
+	.bounce-enter-active {
+		animation: bounce-in .5s;
+	}
+
+	.bounce-leave-active {
+		animation: bounce-in .5s reverse;
+	}
+
+	@@keyframes bounce-in {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			transform: scale(1.5);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+</style>
+
+<div>
+	<span>Transition test 입니다.</span>
+
+	<div id="vueTest">
+		<transition name="fade">
+			<h3 v-if="show1">문자열</h3>
+		</transition>
+		<button type="button" @@click="setShow1">show1</button>
+		<hr/>
+
+		<transition name="bounce">
+			<h1 v-if="show2">문자열 문자열2 문자열3 문자열 문자열2 문자열3 문자열 문자열2 문자열3</h1>
+		</transition>
+		<button type="button" @@click="setShow2">show2</button>
+		<hr/>
+
+		<transition name="fade" @@before-enter="beforeEnter" @@enter="enter" @@after-enter="afterEnter" @@enter-cancelled="enterCancelled" 
+		@@before-leave="beforeLeave" @@leave="leave" @@after-leave="afterLeave" @@leave-cancelled="leaveCancelled">
+			<h3 v-if="show3">문자열3</h3>
+		</transition>
+		<button type="button" @@click="setShow3">show3</button>
+		<h3>status: {{status}}</h3>
+	</div>
+</div>
+
+<script defer type="text/javascript" src="~/js/transition.js"></script>
