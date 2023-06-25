@@ -1,0 +1,20 @@
+﻿<div>
+	<span>Vue Data example 입니다.</span>
+
+	<div id="vueTest">
+		<h3>value1: {{value1}}</h3>
+		<button type="button" @@click="setValue1">value1</button>
+		<hr/>
+
+		<h3>value2: {{obj1.value2}}</h3>
+		<button type="button" @@click="setValue2">value2</button>
+		<hr/>
+
+		<h3>counter: {{counter}}</h3>
+		<h3>Old value: {{oldValue}}</h3>
+		<h3>New value: {{newValue}}</h3>
+		<button type="button" @@click="addCounter">Add counter</button>
+	</div>
+</div>
+
+<script defer type="text/javascript" src="~/js/dataExample.js"></script>
